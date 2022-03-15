@@ -1,0 +1,7 @@
+Glenn Skawski
+1219645141
+1-30-2022
+
+Description
+
+Upon execution with victim, reflector, and interface arguments, the program creates 3 threads simultaneously sniffing on the provided interface. Sniffed packets are filtered by protocol and IP destination whereby matching packets are passed to one of three functions designed to implement the reflecting functionality for each protocol (arp, icmp, tcp, or udp). Each protocol reflection follows the same approach of victim receiving request from attacker, reflector (as itself) sending unmodified request to attacker, receiving attackers response to reflector, and finally reflector sending attackers response back to the attacker with the IP field spoofed with the victim's IP address. The program can respond to ARP protocol for the reflector and attacker. The program implements a three-way handshake for connecting via TCP.
