@@ -1,0 +1,7 @@
+Glenn Skawski
+1219645141
+1-15-2022
+
+Description
+
+Upon execution with port argument, the program creates a TCP/IPv4 socket for TCP protocol. The port argument is passed to a function that attaches localhost:<port> to the socket. Then it listens for HTTP requests. Client HTTP requests are initiated by accepting a connection with the client followed by recieving HTTP GET request header and message. The absolute URI portion of the client's HTTP request header is decoded from URI percent-encoding and checked for presence of exec. If exec is not found, a "404 Not Found" status lined is returned. If exec is found, the command portion of the absolute URI is executed on the localhost's OS whereby the stdout is collected and sent back to the client in the message portion of the servers HTTP response.
